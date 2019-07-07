@@ -133,10 +133,36 @@ figure{
     object-fit: cover;
 }
 
-.about{
+.item.about{
     display: grid;
     border: 1px solid blue; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    /* grid-template-rows: 30px 30px 50px; */
+    grid-template-areas:"title title title" 
+                        "subtitlte subtitle subtitle" 
+                        "info-1 info-2 info-3";
     
+}
+.subitem{
+    border: 1px solid blue;
+}
+.title{
+    grid-area: title;
+}
+.subtitle{
+    grid-area: subtitle;
+}
+.subtitle p{
+    display: flex;
+}
+.info-1{
+    grid-area: info-1;
+}
+.info-2{
+    grid-area: info-2;
+}
+.info-3{
+    grid-area: info-3;
 }
   
 @media screen and (max-width:1024px){
